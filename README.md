@@ -3,6 +3,9 @@
 A secure and scalable full-stack Task Management Portal built using the MERN stack. The application demonstrates industry-standard authentication, Role-Based Access Control (RBAC), RESTful API architecture, and cloud database integration using MongoDB Atlas.
 
 ---
+## 🌐 Live Production Deployments
+* **Live User Interface Dashboard:** [https://secure-task-management-portal-xi.vercel.app](https://secure-task-management-portal-xi.vercel.app)
+* **Live Operational Production API Cluster:** [https://primetrade-backend-emkm.onrender.com/api/v1/tasks](https://primetrade-backend-emkm.onrender.com/api/v1/tasks)
 
 ## 🚀 Features
 
