@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// API base URL pointing to your backend server port
-const API_URL = 'http://localhost:5000/api/v1';
+// DYNAMIC PRODUCTION URL SWITCH: Decoupled to route across cloud domains or local ports seamlessly
+const API_URL = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api/v1` : 'http://localhost:5000/api/v1';
 
 export default function App() {
   // Authentication & Session States
