@@ -1,0 +1,84 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Primetrade API Docs",
+  "dateExported": "2026-06-01T18:00:00.000Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "name": "User Registration",
+      "url": "http://localhost:5000/api/v1/auth/register",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2026-06-01T18:00:00.000Z",
+      "modified": "2026-06-01T18:00:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"developer@test.com\",\n  \"password\": \"securepassword\",\n  \"role\": \"user\"\n}",
+        "form": []
+      }
+    },
+    {
+      "name": "User Login",
+      "url": "http://localhost:5000/api/v1/auth/login",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2026-06-01T18:00:00.000Z",
+      "modified": "2026-06-01T18:00:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"developer@test.com\",\n  \"password\": \"securepassword\"\n}",
+        "form": []
+      }
+    },
+    {
+      "name": "Create Task (Protected)",
+      "url": "http://localhost:5000/api/v1/tasks",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2026-06-01T18:00:00.000Z",
+      "modified": "2026-06-01T18:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <PASTE_YOUR_JWT_TOKEN_HERE>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"Build Web3 Trading Bot Interface\",\n  \"description\": \"Setting up real-time analytics streaming pipelines.\"\n}",
+        "form": []
+      }
+    },
+    {
+      "name": "Fetch Tasks (Protected RBAC)",
+      "url": "http://localhost:5000/api/v1/tasks",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2026-06-01T18:00:00.000Z",
+      "modified": "2026-06-01T18:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <PASTE_YOUR_JWT_TOKEN_HERE>"
+        }
+      ]
+    },
+    {
+      "name": "Delete Task (Admin Only Restricted)",
+      "url": "http://localhost:5000/api/v1/tasks/12345",
+      "method": "DELETE",
+      "sortNum": 50000,
+      "created": "2026-06-01T18:00:00.000Z",
+      "modified": "2026-06-01T18:00:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <PASTE_YOUR_ADMIN_JWT_TOKEN_HERE>"
+        }
+      ]
+    }
+  ]
+}
